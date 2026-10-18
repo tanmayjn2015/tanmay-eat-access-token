@@ -13,13 +13,13 @@
       "dest": "/index.html"
     },
     {
-      "src": "/(.*)",
+      "src": "/(.)",
       "dest": "/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(.)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -28,10 +28,6 @@
         {
           "key": "X-Frame-Options",
           "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
         },
         {
           "key": "Referrer-Policy",
@@ -45,15 +41,6 @@
         {
           "key": "Cache-Control",
           "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "^/.*\\.(jpg|jpeg|png|gif|ico|svg|webp|avif|css|js|woff2|woff|ttf|otf)$",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
